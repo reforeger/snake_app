@@ -12,16 +12,16 @@ namespace Snake_N2
         {
             Console.SetBufferSize(80, 25);
 
-            HorizontallLine upLine = new HorizontallLine(0, 78, "+");
-            HorizontallLine downLine = new HorizontallLine(0, 78, "+");
-            VerticalLine leftLine = new VerticalLine(0, 78, "+");
-            VerticalLine rightLine = new VerticalLine(0, 78, "+");
+            HorizontallLine upLine = new HorizontallLine(0,78,20,'+');
+            HorizontallLine downLine = new HorizontallLine(0, 78, 20, '+');
+            VerticalLine leftLine = new VerticalLine(0, 78, 20, '+');
+            VerticalLine rightLine = new VerticalLine(0, 78, 20, '+');
             upLine.Draw();
             downLine.Draw();
             leftLine.Draw();
             rightLine.Draw();
 
-            Point p = new Point(4, 5, "*");
+            Point p = new Point(4, 5, '*');
             p.Draw();//dddaa
 
         }
