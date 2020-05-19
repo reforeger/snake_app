@@ -22,7 +22,7 @@ namespace Snake_N2
             rightLine.Draw();
 
             Point p = new Point(4, 5, "*");
-            p.Draw();
+            p.Draw();//dddaa
 
         }
     }
