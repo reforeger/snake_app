@@ -1,4 +1,5 @@
-﻿using System;
+﻿using snake;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
@@ -24,7 +25,11 @@ namespace Snake_N2
 
             Point p = new Point(4, 5, '*');
             p.Draw();
+            Console.ReadLine();
 
+            Emploee e = new Emploee();
+            e.age = 42;
+            e.pay = 30000;
         }
     }
 }
