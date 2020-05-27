@@ -1,4 +1,5 @@
-﻿using System;
+﻿using snake;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,13 +8,21 @@ namespace Snake_N2
     class VerticalLine : Figure
     {
 
-        public VerticalLine(int yUp, int yDown, int y, char sym)
+        public VerticalLine(int yUp, int yDown, int x, char sym)
         {
             plist = new List<Point>();
-            for (int x = yUp; x <= yDown; x++)
+            for (int y = yUp; y <= yDown; y++)
             {
-                Point p = new Point(x, y, sym);
+                Point p = new Point( x, y, sym);
                 plist.Add(p);
+            }
+        }
+
+        public void Draw()
+        {
+            foreach(Point p in plist)
+            {
+                p.Draw();
             }
         }
     }

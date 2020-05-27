@@ -3,20 +3,29 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using System.Linq;
+using snake;
 
 namespace Snake_N2
 {
-    class HorizontallLine : Figure
+    class HorizontalLine : Figure
     {
 
-        public HorizontallLine(int xLeft, int xRight, int y, char sym)
+
+        public HorizontalLine(int xLeft, int xRight, int y, char sym)
         {
             plist = new List<Point>();
             for (int x = xLeft; x <= xRight; x++)
             {
                 Point p = new Point(x, y, sym);
                 plist.Add(p);
+            } 
+        }
 
+        public void Draw()
+        {
+            foreach(Point p in plist)
+            {
+                p.Draw();
             }
         }
     }

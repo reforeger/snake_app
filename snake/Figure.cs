@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Snake_N2;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +10,9 @@ namespace snake
     class Figure
     {
         protected List<Point> plist;
-
         public void Draw()
         {
-            foreach ( Point p in plist)
+            foreach (Point p in plist)
             {
                 p.Draw();
             }
