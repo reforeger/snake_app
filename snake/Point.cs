@@ -1,5 +1,7 @@
-﻿using System;
+﻿using snake;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 
@@ -22,12 +24,45 @@ namespace Snake_N2
             sym = _sym;
 
         }
-        public void Draw()
+        public Point (Point p)
+        {
+            x = p.x;
+            y = p.y;
+            sym = p.sym;
+        }
+        public void Move(int offset, Direction direction)
+        {
+            if (direction == Direction.RIGHT)
+            {
+                x = x + offset;
+            }
+            else if (direction == Direction.LEFT)
+            {
+                x = x - offset;
+            }
+            else if (direction == Direction.UP)
+            {
+                y = y + offset;
+            }
+            else if (direction == Direction.DOWN)
+            {
+                y = y - offset;
+            }
+        }
 
+        internal void Clear()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Draw()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
-
+        }
+        public override string ToString()
+        {
+            return x + ", " + y + ", " + sym;
         }
 
     }

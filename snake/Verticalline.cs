@@ -18,12 +18,5 @@ namespace Snake_N2
             }
         }
 
-        public void Draw()
-        {
-            foreach(Point p in plist)
-            {
-                p.Draw();
-            }
-        }
     }
 }

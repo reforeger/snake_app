@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Snake_N2
@@ -21,15 +22,30 @@ namespace Snake_N2
             downLine.Draw();
             leftLine.Draw();
             rightLine.Draw();
-
-
+            //отсартировка точек
             Point p = new Point(4, 5, '*');
+            Snake snake = new Snake( p, 4, Direction.RIGHT );
             p.Draw();
             Console.ReadLine();
+            snake.Draw();
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
 
-            Emploee e = new Emploee();
-            e.age = 42;
-            e.pay = 30000;
         }
     }
 }
