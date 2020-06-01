@@ -17,6 +17,5 @@ namespace Snake_N2
                 plist.Add(p);
             }
         }
-
     }
 }

@@ -11,16 +11,16 @@ namespace snake
 {
     class Snake : Figure
     {
-        Direction direction;
+        public Direction direction;
         private int tail;
 
-        public Snake( Point tall, int lenght, Direction _direction)
+        public Snake(Point tall, int lenght, Direction _direction)
         {
             direction = _direction;
             plist = new List<Point>();
             for(int i = 0; i < lenght; i++)
             {
-                Point p = new Point( tail );
+                Point p = new Point(tail);
                 p.Move( i, direction );
                 plist.Add(p);
             }
