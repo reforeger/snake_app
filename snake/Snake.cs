@@ -34,8 +34,13 @@ namespace snake
 
             tail.Clear();
             head.Draw();
-
         }
-        public Point GetNextPoint() 
+        public Point GetNextPoint()
+        {
+            Point head = plist.Last();
+            Point nextPoint = new Point(head);
+            nextPoint.Move(1, direction);
+            return nextPoint;
+        }
     }
 }

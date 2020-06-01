@@ -50,15 +50,16 @@ namespace Snake_N2
             }
         }
 
-        internal void Clear()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
+        }
+
+        public void Clear()
+        {
+            sym = ' ';
+            Draw();
         }
         public override string ToString()
         {
