@@ -1,5 +1,6 @@
 ﻿using snake;
 using System;
+using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace Snake_N2
         public int y;
         public char sym;
 
-        public Point(int v)
+        public Point()
         {
         }
 
@@ -32,19 +33,19 @@ namespace Snake_N2
         }
         public void Move(int offset, Direction direction)
         {
-            if (direction == Direction.RIGHT)
+            if(direction == Direction.RIGHT)
             {
                 x = x + offset;
             }
-            else if (direction == Direction.LEFT)
+            else if(direction == Direction.LEFT)
             {
                 x = x - offset;
             }
-            else if (direction == Direction.UP)
+            else if(direction == Direction.UP)
             {
                 y = y - offset;
             }
-            else if (direction == Direction.DOWN)
+            else if(direction == Direction.DOWN)
             {
                 y = y + offset;
             }
@@ -52,8 +53,8 @@ namespace Snake_N2
 
         public void Draw()
         {
-            Console.SetCursorPosition(x, y);
-            Console.Write(sym);
+            Console.SetCursorPosition( x, y );
+            Console.Write( sym );
         }
 
         public void Clear()
