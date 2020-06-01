@@ -27,24 +27,25 @@ namespace Snake_N2
             Snake snake = new Snake( p, 4, Direction.RIGHT );
             p.Draw();
             Console.ReadLine();
-            snake.Draw();
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
+            while(true)
+            {
+                if(Console.KeyAvailable)
+                {
+                    ConsoleKeyinfo key = Console.ReadKey();
+                    if (key.Key == ConsoleKey.LeftArrow)
+                        snake.direction = Direction.LEFT;
+                    else if (key.Key == ConsoleKey.LeftArrow)
+                        snake.direction = Direction.RIGHT;
+                    else if (key.Key == ConsoleKey.LeftArrow)
+                        snake.direction = Direction.DOWN;
+                    else if (key.Key == ConsoleKey.LeftArrow)
+                        snake.direction = Direction.UP;
+                }
+                snake.Move();
+                snake.Draw();
+                Thread.Sleep(100);
+
+            }
 
         }
     }
