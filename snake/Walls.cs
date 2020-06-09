@@ -17,7 +17,7 @@ namespace snake
 
             //Отрисовка рамочки
             HorizontalLine upLine = new HorizontalLine(0, mapWidth - 2, 0, '+');
-            HorizontalLine downLine = new HorizontalLine(0, mapWidth - 2, mapWidth - 1, '+');
+            HorizontalLine downLine = new HorizontalLine(0, mapWidth - 2, mapHeaight - 1, '+');
             VerticalLine leftLine = new VerticalLine(0, mapHeaight - 1, 0, '+');
             VerticalLine rightLine = new VerticalLine(0, mapHeaight - 1, mapWidth - 2, '+');
             wallList.Add(upLine);
