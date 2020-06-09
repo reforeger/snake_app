@@ -12,7 +12,6 @@ namespace snake
     class Snake : Figure
     {
         public Direction direction;
-        private int tail;
 
         public Snake( Point tail, int length, Direction _direction )
         {

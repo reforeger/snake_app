@@ -1,4 +1,5 @@
 ﻿using System;
+using Snake_N2;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +21,7 @@ namespace Snake_N2
                 plist.Add(p);
             } 
         }
-        public override void Draw()
+        public new void Draw()
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
             base.Draw();
