@@ -15,12 +15,13 @@ namespace snake
         public Params()
         {
             var ind = Directory.GetCurrentDirectory().ToString()
-                .IndexOf("bin", StrinsComparison.Ordinal);
+                .IndexOf("bin", StringComparison.Ordinal);
 
             string binFolder =
                 Directory.GetCurrentDirectory().ToString().Substring(0, ind)
+                .ToString();
 
-            resourcesFolder = binFolder + "resources//";
+            resourcesFolder = binFolder + "Resources//";
         }
 
         public string GetResourceFolder()
