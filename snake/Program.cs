@@ -12,7 +12,7 @@ namespace Snake_N2
     {
         static void Main(string[] args)
         {
-            Console.SetWindowSize(80, 25);
+            Console.SetWindowSize(80, 27);
             Walls walls = new Walls(80, 25);
             walls.Draw();
             //отсартировка точек
@@ -26,14 +26,36 @@ namespace Snake_N2
             Point food = foodCreator.CreateFood();
             food.Draw();
 
+            int si = 0;
+
+
             while (true)
             {
                 if ( walls.IsHit(snake) || snake.IsHitTail() )
                 {
+                    Gameover gameover = new Gameover();
+                    gameover.Game();
+
+                    Console.ForegroundColor = ConsoleColor.White;
+
+                    Console.Write("Enter your name: ");
+
+                    String nimi = (Console.ReadLine());
+
+                    Console.WriteLine(nimi + ": " + si + "Points");
+
+                    string answer = nimi + ": " + si + "Points";
+
+
+
                     break;
                 }
+                Score score = new Score();
+                score.Scoree(si, 0, 25);
+
                 if(snake.Eat(food) )
                 {
+                    si++;
                     food = foodCreator.CreateFood();
                     food.Draw();
                 }

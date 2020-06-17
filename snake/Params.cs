@@ -8,7 +8,7 @@ using System.IO;
 
 namespace snake
 {
-    class Params
+    class Params : Program
     {
         private string resourcesFolder;
 

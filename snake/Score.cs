@@ -14,7 +14,6 @@ namespace snake
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Console.SetCursorPosition(x, y);
             Console.WriteLine("Score: " + a);
-
         }
 
     }

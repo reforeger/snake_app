@@ -55,6 +55,7 @@
     <Compile Include="Direction.cs" />
     <Compile Include="Figure.cs" />
     <Compile Include="FoodCreator.cs" />
+    <Compile Include="Gameover.cs" />
     <Compile Include="Horizotaline.cs" />
     <Compile Include="Params.cs" />
     <Compile Include="Point.cs" />
@@ -74,6 +75,8 @@
   <ItemGroup>
     <Content Include="Resources\click.mp3" />
     <Content Include="Resources\lost.mp3" />
+    <Content Include="Resources\record.txt" />
+    <Content Include="Resources\results.txt" />
     <Content Include="Resources\stardust.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
