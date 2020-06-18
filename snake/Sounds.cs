@@ -11,7 +11,7 @@ namespace snake
 {
     class Sounds
     {
-        WindowsMediaPlayer player = new WindowsMediaPlayer();
+        public WindowsMediaPlayer player = new WindowsMediaPlayer();
         private string pathToMedia;
 
         public Sounds(string pathToResources)

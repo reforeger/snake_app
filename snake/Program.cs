@@ -1,5 +1,6 @@
 ﻿using snake;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
@@ -26,7 +27,7 @@ namespace Snake_N2
             Point food = foodCreator.CreateFood();
             food.Draw();
 
-            int si = 0;
+            int s = 0;
 
 
             while (true)
@@ -42,20 +43,31 @@ namespace Snake_N2
 
                     String nimi = (Console.ReadLine());
 
-                    Console.WriteLine(nimi + ": " + si + "Points");
+                    Console.WriteLine(nimi + ": " + s + "Points");
 
-                    string answer = nimi + ": " + si + "Points";
+                    string reco = nimi + ": " + s + "Points";
 
+                    using (StreamWriter to_file = new StreamWriter("record", true))
+                    {
+                        to_file.WriteLine(reco);
+                        to_file.Close();
+                        Console.ForegroundColor = ConsoleColor.White;
 
+                        using (StreamWriter to_score = new StreamWriter("results"))
+                        {
+                            to_file.WriteLine(s);
+                            to_score.Close();
+                        }
+                    }
 
                     break;
                 }
                 Score score = new Score();
-                score.Scoree(si, 0, 25);
+                score.Scoree(s, 0, 25);
 
                 if(snake.Eat(food) )
                 {
-                    si++;
+                    s++;
                     food = foodCreator.CreateFood();
                     food.Draw();
                 }
