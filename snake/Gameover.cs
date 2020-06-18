@@ -12,7 +12,7 @@ namespace snake
     {
         internal void Game()
         {
-            throw new NotImplementedException();
+
         }
 
         public void WriteGameOver(string nimi, int score)
@@ -23,11 +23,11 @@ namespace snake
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.SetCursorPosition(xOffset, yOffset++);
             WriteText("G A M E  O V E R", xOffset + 1, yOffset++);
-            WriteText("Для перезапуска нажмите Enter", xOffset, yOffset++);
+            WriteText("Для перезапуска игры, нажмите R", xOffset, yOffset++);
             Console.ForegroundColor = ConsoleColor.White;
             WriteText("Ваш счёт: " + score, xOffset + 2, yOffset++);
             Console.ForegroundColor = ConsoleColor.Blue;
-            using (var to_file = new StreamWriter("score.txt", true))
+            using (StreamWriter to_file = new StreamWriter("results.txt", true))
             {
                 to_file.WriteLine("Name: " + nimi + " AND Score: " + score);
                 to_file.Close();
