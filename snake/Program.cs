@@ -34,7 +34,7 @@ namespace Snake_N2
             {
                 if ( walls.IsHit(snake) || snake.IsHitTail() )
                 {
-                    Gameover gameover = new Gameover();
+                    GameOver gameover = new GameOver();
                     gameover.Game();
 
                     Console.ForegroundColor = ConsoleColor.White;
@@ -48,7 +48,7 @@ namespace Snake_N2
                     string reco = nimi + ": " + s + "Points";
 
 
-                    using (StreamWriter to_file = new StreamWriter(@"C:\Users\snake_app6\snake\Resources\record.txt"))
+                    using (StreamWriter to_file = new StreamWriter(@"C:\Users\source\repos\snake_app6\snake\Resources\record.txt"))
                     {
                         to_file.Write(reco);
                         Console.WriteLine();
