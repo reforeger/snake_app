@@ -47,18 +47,16 @@ namespace Snake_N2
 
                     string reco = nimi + ": " + s + "Points";
 
-                    using (StreamWriter to_file = new StreamWriter("record", true))
-                    {
-                        to_file.WriteLine(reco);
-                        to_file.Close();
-                        Console.ForegroundColor = ConsoleColor.White;
 
-                        using (StreamWriter to_score = new StreamWriter("results"))
-                        {
-                            to_file.WriteLine(s);
-                            to_score.Close();
-                        }
+                    using (StreamWriter to_file = new StreamWriter(@"C:\Users\snake_app6\snake\Resources\record.txt"))
+                    {
+                        to_file.Write(reco);
+                        Console.WriteLine();
                     }
+
+                    //using (StreamWriter to_score = new StreamWriter("results"))
+                        
+                    
 
                     break;
                 }

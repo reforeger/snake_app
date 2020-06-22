@@ -22,7 +22,7 @@ namespace snake
         public void Play()
         {
             player.URL = pathToMedia + "stardust.mp3";
-            player.settings.volume = 30;
+            player.settings.volume = 20;
             player.controls.play();
             player.settings.setMode("loop", true);
         }
