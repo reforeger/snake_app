@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Snake_N2
 {
@@ -62,6 +63,9 @@ namespace Snake_N2
                 }
                 Levels_10 Level = new Levels_10();
                 Level.AddLevel();
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.SetCursorPosition(16, 25);
+                Console.WriteLine("1");
                 Score score = new Score();
                 score.Scoree(s, 0, 25);
 
@@ -82,23 +86,18 @@ namespace Snake_N2
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.HandleKey(key.Key);
                 }
-                while (true)
-                {
-                    if (s == 3)
-                    {
-                        Thread.Sleep(100);
-                        Console.ForegroundColor = ConsoleColor.Blue;
-                        Console.SetCursorPosition(13, 25);
-                        Console.WriteLine("2");
-                    }
-                    else if (s == 6)
-                    {
-                        Thread.Sleep(30);
-                        Console.ForegroundColor = ConsoleColor.Blue;
-                        Console.SetCursorPosition(13, 25);
-                        Console.WriteLine("5");
-                    }
-                }
+                Thread.Sleep(100);
+                if (s == 3)
+                
+                    Thread.Sleep(60);
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.SetCursorPosition(16, 25);
+                    Console.WriteLine("2");
+                else if (s == 6) 
+                    Thread.Sleep(10);
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.SetCursorPosition(16, 25);
+                    Console.WriteLine("3");
             }
         }
     }

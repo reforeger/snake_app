@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Reflection;
-
+using static System.Net.Mime.MediaTypeNames;
 
 namespace snake
 {
@@ -13,13 +13,9 @@ namespace snake
     {
         public void Nupi()
         {
-            ConsoleKeyInfo nuup = Console.ReadKey();
-            if (nuup.Key == ConsoleKey.R)
-            {
-                var fileName = Assembly.GetExecutingAssembly().Location;
-                System.Diagnostics.Process.Start(fileName);
-                Environment.Exit(0);
-            }
+            ConsoleKeyInfo key = Console.ReadKey();
+            if (key.Key == ConsoleKey.R)
+                Application.Restart();
         }
     }
 }
