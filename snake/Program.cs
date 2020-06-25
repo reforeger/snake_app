@@ -61,25 +61,43 @@ namespace Snake_N2
                     break;
                 }
                 Levels_10 Level = new Levels_10();
-                Level.AddLevel(10, 25);
+                Level.AddLevel();
                 Score score = new Score();
                 score.Scoree(s, 0, 25);
 
-                if(snake.Eat(food) )
+                
+                if (snake.Eat(food))
                 {
                     s++;
                     food = foodCreator.CreateFood();
                     food.Draw();
-                    
+
                 }
                 else
                 {
                     snake.Move();
                 }
-                if(Console.KeyAvailable)
+                if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.HandleKey(key.Key);
+                }
+                while (true)
+                {
+                    if (s == 3)
+                    {
+                        Thread.Sleep(100);
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.SetCursorPosition(13, 25);
+                        Console.WriteLine("2");
+                    }
+                    else if (s == 6)
+                    {
+                        Thread.Sleep(30);
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.SetCursorPosition(13, 25);
+                        Console.WriteLine("5");
+                    }
                 }
             }
         }

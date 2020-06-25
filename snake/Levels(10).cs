@@ -1,37 +1,23 @@
 ﻿using System;
+using snake;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace snake
+namespace Snake_N2
 {
     class Levels_10
     {
 
-        int s = 0;
 
 
-        public void AddLevel(int s)
+        public void AddLevel()
         {
-            while (true)
-            { 
-
-                if (s == 2)
-                {
-                    Thread.Sleep(200);
-                }
-                else if (s == 5)
-                {
-                    Thread.Sleep(400);
-                }
-            }
-        }
-
-        internal void AddLevel(int v1, int v2)
-        {
-
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.SetCursorPosition(10, 25);
+            Console.WriteLine("Level: ");
         }
     }
 }
