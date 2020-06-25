@@ -60,6 +60,8 @@ namespace Snake_N2
 
                     break;
                 }
+                Levels_10 Level = new Levels_10();
+                Level.AddLevel(10, 25);
                 Score score = new Score();
                 score.Scoree(s, 0, 25);
 
@@ -68,12 +70,12 @@ namespace Snake_N2
                     s++;
                     food = foodCreator.CreateFood();
                     food.Draw();
+                    
                 }
                 else
                 {
                     snake.Move();
                 }
-                Thread.Sleep(100);
                 if(Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
